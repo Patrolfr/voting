@@ -1,0 +1,43 @@
+server:
+  tomcat:
+    max-threads: 10
+spring:
+  boot:
+    admin:
+      client:
+#        url: http://localhost:2222
+        url: http://localhost:8090
+  datasource:
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/voting
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  security:
+    user:
+      name: user
+      password: password
+  output:
+    ansi:
+      enabled: ALWAYS
+logging:
+  level:
+    mar: DEBUG
+    org:
+      springframework:
+        transaction:
+          interceptor: TRACE
+management:
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#    enabled-by-default: true

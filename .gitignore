@@ -1,14 +1,21 @@
 # Compiled class file
 *.class
 
-# Log file
-*.log
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**
+!**/src/test/**
 
-# BlueJ files
-*.ctxt
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+
 
 # Package Files #
 *.jar
